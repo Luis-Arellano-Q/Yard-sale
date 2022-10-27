@@ -158,13 +158,16 @@ body{
 
 /* menu mobile ****/
 .mobile-menu {
+    background-color: var(--white);
     position: absolute;
     top: 52px;
+    left: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    width: 100%;
 }
 .mobile-menu a {
     text-decoration: none;
@@ -203,8 +206,7 @@ body{
     right: 0;
     width: 360px;
     /* max-width: 360px; */
-    padding-bottom: 24px;
-    padding: 0 24px;
+    padding: 5px 24px 15px 24px;
 
 }
 .title-container {
@@ -343,5 +345,81 @@ body{
     .product-card img {
         width: 140px;
         height: 140px;
+    }
+}
+
+/*  product detail secondary more info*/
+
+.product-detail-secondary {
+    position: absolute;
+    right: 0;
+    width: 360px;
+    /* max-width: 360px; */
+    padding-bottom: 24px;
+}
+.product-detail-close-secondary {
+    background: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+    z-index: 2;
+}
+
+.product-detail-close-secondary:hover {
+    cursor: pointer;
+}
+.product-detail-secondary > img:nth-child(2) {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+}
+.product-info-secondary {
+    margin: 24px 24px 0 24px;
+}
+.product-info-secondary p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+.product-info-secondary p:nth-child(2){
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+.product-info-secondary p:nth-child(3){
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+.primary-button-secondary{
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+
+    color: var(--white);
+    font-size: var(--md);
+    font-weight: bold;
+
+    background-color: var(--hospital-green);
+
+    cursor: pointer;
+}
+.add-cart-button-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 640px) {
+    .product-detail-secondary {
+        width: 100%;
     }
 }
